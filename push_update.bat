@@ -19,7 +19,7 @@ if not defined APP_MANIFEST (
 echo Found application manifest: "%APP_MANIFEST%"
 
 :: === Step 2: Extract version number using PowerShell ===
-for /f "usebackq delims=" %%v in (`powershell -NoProfile -Command "(Select-String -Path '%APP_MANIFEST%' -Pattern 'version=""([\d\.]+)""').Matches.Groups[1].Value"`) do set "VERSION=%%v"
+for /f "usebackq delims=" %%v in (`powershell -NoProfile -Command "(Select-String -Path '%APP_MANIFEST%' -Pattern 'assemblyIdentity.*version=""([\d\.]+)""').Matches[0].Groups[1].Value"`) do set "VERSION=%%v"
 
 if not defined VERSION (
     echo ERROR: Could not extract version number from "%APP_MANIFEST%"
