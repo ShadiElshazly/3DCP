@@ -1,37 +1,43 @@
 @echo off
-setlocal enabledelayedexpansion
+setlocal
 
-echo ================================================
-echo Deploying new version to GitHub Pages
-echo ================================================
+echo ======================================================
+echo Deploying ClickOnce publish to GitHub Pages
+echo ======================================================
 
-:: Set your local publish folder path
-set PUBLISH_FOLDER=D:\Shadi\PUBLISHED_SOFTWARE
-
-:: Navigate to the publish folder
-cd /d "%PUBLISH_FOLDER%"
-
-:: === Step 1: Auto-detect version from .application file ===
-for /f "tokens=2 delims== " %%a in ('findstr /i "version=" *.application') do (
-    set ver=%%a
-    set ver=!ver:"=!
-    set ver=!ver:>=!
-    set ver=!ver:<=!
+:: === Step 1: Find the .application file ===
+for %%f in (*.application) do (
+    set "APP_MANIFEST=%%f"
 )
-echo Detected version: %ver%
 
-:: === Step 2: Commit and push ===
+if not defined APP_MANIFEST (
+    echo ERROR: No .application file found in this folder!
+    pause
+    exit /b 1
+)
+
+echo Found application manifest: "%APP_MANIFEST%"
+
+:: === Step 2: Extract version number using PowerShell ===
+for /f "usebackq delims=" %%v in (`powershell -NoProfile -Command "(Select-String -Path '%APP_MANIFEST%' -Pattern 'version=""([\d\.]+)""').Matches.Groups[1].Value"`) do set "VERSION=%%v"
+
+if not defined VERSION (
+    echo ERROR: Could not extract version number from "%APP_MANIFEST%"
+    pause
+    exit /b 1
+)
+
+echo Detected version: %VERSION%
+
+:: === Step 3: Commit and push to GitHub ===
 echo.
-echo Committing and pushing version %ver% ...
-echo ================================================================
+echo Deploying version %VERSION% to GitHub...
+echo.
 
 git add .
-git commit -m "Auto update: version %ver%"
-git push -u origin main
+git commit -m "Auto-deploy version %VERSION%"
+git push origin main
 
-echo ================================================================
-echo ✅ Done! Version %ver% is now live at:
-echo https://shadielshazly.github.io/3DCP/
-echo ================================================================
-
+echo.
+echo Deployment complete!
 pause
