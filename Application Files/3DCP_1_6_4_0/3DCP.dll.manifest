@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="3DCP.exe" version="1.6.4.0" publicKeyToken="5c0ae6f7bbce102f" language="en" processorArchitecture="msil" type="win32" />
+  <description asmv2:iconFile="1-c0f622eb.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="Launcher" version="8.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="Launcher.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          UAC Manifest Options
+          If you want to change the Windows User Account Control level replace the
+          requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         If you want to utilize File and Registry Virtualization for backward
+         compatibility then delete the requestedExecutionLevel node.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Launcher.exe" size="17376">
+      <assemblyIdentity name="Launcher" version="8.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>yci3PO5gomhMGNmt7oWqmx2RtE6WsPpm/5SbotID9QQ=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="1-c0f622eb.ico" size="50124">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>+Ual+LyvnPOfYK6/FezRbCywt1VHS0I7KVd/SRRdypY=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="3DCP.exe" size="15860896">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>NLSLb219Tzc72bJuDNwd4ZS3PsOyPNxiaVZpVQXzyYg=</dsig:DigestValue>
+    </hash>
+  </file>
+<publisherIdentity name="CN=DESKTOP-VGNNCUR\Admin" issuerKeyHash="230757fb7dbc51996bbd96faf93f87356bcf180c" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>2YvQ/p4VVY5GonEHyAPcu6zKj2EFye12lUBaA2cpuis=</DigestValue></Reference></SignedInfo><SignatureValue>q5GScruj6P0ha52r4mnfrq7JRflgjeKT/P8DVm1FGQ0+ajS1jOHOiT3wdj5aWSnyNHLyxB8xPzTG4eK//GtfXaipKgP3Zk9SgigDBs26REAfu4vvkhss47SsxNkdjz+BzHohfzSP2zK2UgiNFvyXaM0IjPznnVl470FtRdv5VP0=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>xDCjKPnRTeqecXKDC5+a4+e+LVbCRNuDKceCzrRSYdMDPN0i3hsK+hRGgeesMIjA4JGSpsOFAcvR379TL9Y6+tw/jPVKM53pUDazKa/kctNPi1TrKFQawRCNtVxsm4jJ4xlMoDKpvQHJ5j1YjczAJJy+Jnm+ltPcp83q9U3z5/k=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="2bba2967035a409576edc905618fcaacbbdc03c80771a2468e55159efed08bd9" Description="" Url=""><as:assemblyIdentity name="3DCP.exe" version="1.6.4.0" publicKeyToken="5c0ae6f7bbce102f" language="en" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=DESKTOP-VGNNCUR\Admin</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>/iTw5HLixNmpvSiyxur5S/hplhvUVoNevH8ckmycJFI=</DigestValue></Reference></SignedInfo><SignatureValue>wFk9wwO/GfEniKPOVJw0ZyvPabIyArHHHAgRW4CGfnmT+xnCXDRX40u5Qos1V8LDgTNNEIyu4Y2dHwDLDXUj7+r2mDjXYb73ObzyD/S/Ayf1+jMl/kFw8omS9O/kLOY2pPfzFTWf/WSoiba+VHIuG6FWYOHbbubRVsyyxPm62Wg=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>xDCjKPnRTeqecXKDC5+a4+e+LVbCRNuDKceCzrRSYdMDPN0i3hsK+hRGgeesMIjA4JGSpsOFAcvR379TL9Y6+tw/jPVKM53pUDazKa/kctNPi1TrKFQawRCNtVxsm4jJ4xlMoDKpvQHJ5j1YjczAJJy+Jnm+ltPcp83q9U3z5/k=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB7TCCAVagAwIBAgIQFvolArzIULVF9kQkthKDSjANBgkqhkiG9w0BAQsFADA1MTMwMQYDVQQDHioARABFAFMASwBUAE8AUAAtAFYARwBOAE4AQwBVAFIAXABBAGQAbQBpAG4wHhcNMjUxMTA2MTEzMjI0WhcNMjYxMTA2MTczMjI0WjA1MTMwMQYDVQQDHioARABFAFMASwBUAE8AUAAtAFYARwBOAE4AQwBVAFIAXABBAGQAbQBpAG4wgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAMQwoyj50U3qnnFygwufmuPnvi1WwkTbgynHgs60UmHTAzzdIt4bCvoURoHnrDCIwOCRkqbDhQHL0d+/Uy/WOvrcP4z1SjOd6VA2symv5HLTT4tU6yhUGsEQjbVcbJuIyeMZTKAyqb0ByeY9WI3MwCScviZ5vpbT3KfN6vVN8+f5AgMBAAEwDQYJKoZIhvcNAQELBQADgYEALYmsCWpsf+WjPxoepYS36085OGGBGj6z05GallekeLOaro503X/uSnU3MaafdkQyJfqJWrOU2TVb/I/haYYLXaIWCvOkrJoApKtEjB+xV95qLFoRz9K+djqdUKhCcFn3DgFw3UUy7VQoIA+Dhw4VOe0VC3qYRr4inhwoAU8FUsc=</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>
